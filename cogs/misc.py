@@ -19,7 +19,7 @@ class Misc(commands.Cog):
         await cursor[0].close()
 
     @commands.command(aliases=["r"])
-    @ommands.is_owner()
+    @commands.is_owner()
     @commands.guild_only()
     async def reload(self, ctx):
         embed1=disnake.Embed(title="Reload", description="Reloading...")
