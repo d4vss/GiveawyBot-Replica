@@ -1,4 +1,4 @@
-import disnake, os, sys, json, asyncio, time, datetime, glob, psutil, aiosqlite
+import disnake, os, sys, json, asyncio, time, datetime, glob, aiosqlite
 from disnake import Embed
 from disnake.ext import commands
 from disnake.ext.commands import has_permissions, MissingPermissions
@@ -6,7 +6,6 @@ start_time = time.time()
 class Misc(commands.Cog):
     def __init__(self, client):
         self.client = client
-        self.process = psutil.Process()
 
     async def connect_db(self):
         db = await aiosqlite.connect("data/database.sqlite", timeout=3)
